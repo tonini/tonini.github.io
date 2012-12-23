@@ -390,7 +390,6 @@ dl dd {
 
 footer {
   background: transparent url('../images/hr.png') 0 0 no-repeat;
-  margin-top: 40px;
   padding-top: 20px;
   padding-bottom: 30px;
   font-size: 13px;
@@ -452,3 +451,46 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
+
+/* Experience */
+ul.experience li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+.details {
+  float: left;
+  width: 40%;
+}
+.details h3 {
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: #6d6d6d;
+}
+
+.description {
+  width: 60%;
+  float: right;
+}
+
+.description h3 {
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: 'Lekton', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: #6d6d6d;
+  margin: 0;
+}
+
+.description p {
+  margin: 0;
+  padding: 0;
+}
