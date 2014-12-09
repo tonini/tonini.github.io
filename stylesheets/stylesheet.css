@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
-   */
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,6 +21,8 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: 'Pontano Sans', sans-serif;
+  font-weight: 400;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -38,9 +40,9 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
-}
+            content: '';
+            content: none;
+          }
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -55,20 +57,65 @@ table {
 body {
   font-size: 1em;
   line-height: 1.5;
-  background: #e7e7e7 url(../images/grid.png) 0 0 repeat;
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  background: #fff;
   font-size: 21px;
   line-height: 30px;
   /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); */
   color: #6d6d6d;
 }
 
-a {
-  color: #6d6d6d;
+.profile {
+  text-align: center;
+  margin-top: 50px;
+  height: 500px;
 }
-a:hover {
-  color: #6d6d6d;
-  text-decoration: underline;
+
+.profile h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.profile .description {
+  padding: 20px 0;
+  color: rgba(0,0,0,0.6);
+  font-size: 18px;
+  outline: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.profile .social {
+
+}
+
+.profile .social a {
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+.profile .social a .icon:hover {
+  opacity: 0.6;
+}
+
+.avatar img {
+  margin: 0 auto 30px auto;
+  border-radius: 120px;
+  border: 3px solid #ddd;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+}
+
+.avatar img:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -77,14 +124,10 @@ header {
 }
 
 header h1 {
-  /* font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900; */
-  letter-spacing: -1px;
-  /* font-size: 48px; */
   color: #303030;
   line-height: 1.2;
   text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
-  /* font: 400 74px/1.3 'Bevan', Georgia, serif; */
-  font: 700 100px/1.2 'Lato';
+  font-family: 'Pontano Sans', sans-serif;
 }
 
 header h2 {
@@ -149,13 +192,9 @@ header h2 {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.inner {
-  width: 620px;
+#container  {
+  width: 700px;
   margin: 0 auto;
-}
-
-#container .inner img {
-  max-width: 100%;
 }
 
 #downloads {
@@ -340,16 +379,8 @@ h6 {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 20px;
-}
-
-a {
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 p a {
@@ -398,7 +429,7 @@ footer {
   text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
   font-family: 'Lato';
   text-align: center;
-/* line-height: 25px; */
+  /* line-height: 25px; */
 }
 
 footer a {
@@ -460,39 +491,4 @@ ul.experience li {
   margin: 0;
   padding: 0;
   height: 60px;
-}
-
-.details {
-  float: left;
-  width: 40%;
-}
-.details h3 {
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: 'Lekton', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  color: #6d6d6d;
-}
-
-.description {
-  width: 60%;
-  float: right;
-}
-
-.description h3 {
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: 'Lekton', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  color: #6d6d6d;
-  margin: 0;
-}
-
-.description p {
-  margin: 0;
-  padding: 0;
 }
