@@ -21,7 +21,6 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: 'Pontano Sans', sans-serif;
   font-weight: 400;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,20 +47,14 @@ table {
   border-spacing: 0;
 }
 
-
-/* h1 { */
-/*   font: 400 80px/1.2 'Nixie One', Georgia, serif; */
-/* } */
-
-/* LAYOUT STYLES */
 body {
   font-size: 1em;
   line-height: 1.5;
   background: #fff;
   font-size: 21px;
   line-height: 30px;
-  /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); */
   color: #6d6d6d;
+  font-family: 'Pontano Sans', sans-serif;
 }
 
 .profile {
@@ -71,8 +64,12 @@ body {
 }
 
 .profile h1 {
+  color: #303030;
+  line-height: 1.2;
+  font-weight: 600;
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+  font-family: 'Pontano Sans', sans-serif;
   font-size: 60px;
-  font-weight: 800;
 }
 
 .profile .description {
@@ -123,13 +120,7 @@ header {
   padding-bottom: 25px;
 }
 
-header h1 {
-  color: #303030;
-  line-height: 1.2;
-  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
-  font-family: 'Pontano Sans', sans-serif;
-}
-
+header
 header h2 {
   letter-spacing: -1px;
   text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
@@ -137,13 +128,11 @@ header h2 {
   color: gray;
   font-weight: normal;
   line-height: 1.3;
-  font-family: 'Lato';
   font-size: 24px;
   line-height: 25px;
 }
 
 #container {
-  /* background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat; */
   min-height: 595px;
 }
 
@@ -334,13 +323,6 @@ form {
   background: #f2f2f2;
   padding: 20px;
 
-}
-
-
-/* GENERAL ELEMENT TYPE STYLES */
-
-h1 {
-  font-size: 32px;
 }
 
 h2 {
