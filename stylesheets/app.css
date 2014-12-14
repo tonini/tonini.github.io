@@ -8,11 +8,13 @@ body {
   font-family: 'Pontano Sans', sans-serif;
 }
 
-#container {
-  min-height: 595px;
+#container  {
+  width: 700px;
+  margin: 0 auto;
 }
 
 .profile {
+  clear: both;
   text-align: center;
   margin-top: 50px;
   height: 500px;
@@ -24,11 +26,12 @@ body {
   font-weight: 600;
   text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
   font-family: 'Pontano Sans', sans-serif;
+  margin: 0px;
   font-size: 60px;
 }
 
 .profile .description {
-  padding: 20px 0;
+  padding: 0px 0;
   color: rgba(0,0,0,0.6);
   font-size: 18px;
   outline: 0;
@@ -37,6 +40,8 @@ body {
   letter-spacing: -0.02em;
   font-weight: 400;
 }
+
+.profile .social { margin-top: 50px; }
 
 .profile .social a {
   padding: 0 5px;
@@ -62,54 +67,41 @@ body {
   cursor: pointer;
 }
 
-#main_nav {
+#nav {
   margin: 10px auto 0 auto;
-  width: 620px;
-  height: 30px;
+  width: 700px;
+  font-size: 14px;
 }
 
-#main_nav ul {
-  float: left;
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#nav ul li {
+  padding-right: 15px;
+  display: inline-block;
   list-style: none;
 }
 
-#main_nav ul li {
-  float: left;
-  margin: 5px 0 0 0;
-  padding: 0 2px;
-  list-style: none;
-}
-
-#main_nav ul li:last-child {
-  padding: 0 2px;
+#nav ul li:last-child {
   border: none;
 }
 
-#main_nav ul li a {
-  padding: 3px 10px 1px 10px;
+#nav ul li a {
+  color: #333;
   display: block;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.07);
 }
 
-#main_nav ul li a:hover {
-  background: rgba(0, 0, 0, 0.2);
+#nav ul li a:hover {
+  text-decoration: underline;
 }
 
-#main_nav ul li a.active {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#container  {
-  width: 700px;
-  margin: 0 auto;
+#nav ul li a.active {
+  text-decoration: underline;
 }
 
 hr {
@@ -121,21 +113,55 @@ hr {
   background: transparent url('../images/hr.png') 50% 0 no-repeat;
 }
 
-h5 {
-  font-size: 1em;
+.projects {
+  margin: 50px auto 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.projects i {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.projects ul {
+  width: 500px;
+  text-align: left !important;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.projects ul li {
+  padding: 0 0 20px 0;
+}
+
+.projects p {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+.projects a {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.projects a:hover {
+  text-decoration: underline;
+}
+
+h1 {
   color: #303030;
-}
-
-h6 {
-  font-size: .8em;
-  color: #303030;
-}
-
-p {
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-p a {
-  font-weight: 400;
+  line-height: 1.2;
+  font-weight: 600;
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+  font-family: 'Pontano Sans', sans-serif;
+  margin: 0px;
+  font-size: 30px;
 }
