@@ -1,0 +1,141 @@
+body {
+  font-size: 1em;
+  line-height: 1.5;
+  background: #fff;
+  font-size: 21px;
+  line-height: 30px;
+  color: #6d6d6d;
+  font-family: 'Pontano Sans', sans-serif;
+}
+
+#container {
+  min-height: 595px;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 50px;
+  height: 500px;
+}
+
+.profile h1 {
+  color: #303030;
+  line-height: 1.2;
+  font-weight: 600;
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 60px;
+}
+
+.profile .description {
+  padding: 20px 0;
+  color: rgba(0,0,0,0.6);
+  font-size: 18px;
+  outline: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.profile .social a {
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+.profile .social a .icon:hover {
+  opacity: 0.6;
+}
+
+.avatar img {
+  margin: 0 auto 30px auto;
+  border-radius: 120px;
+  border: 3px solid #ddd;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+}
+
+.avatar img:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+#main_nav {
+  margin: 10px auto 0 auto;
+  width: 620px;
+  height: 30px;
+}
+
+#main_nav ul {
+  float: left;
+  list-style: none;
+}
+
+#main_nav ul li {
+  float: left;
+  margin: 5px 0 0 0;
+  padding: 0 2px;
+  list-style: none;
+}
+
+#main_nav ul li:last-child {
+  padding: 0 2px;
+  border: none;
+}
+
+#main_nav ul li a {
+  padding: 3px 10px 1px 10px;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+#main_nav ul li a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#main_nav ul li a.active {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#container  {
+  width: 700px;
+  margin: 0 auto;
+}
+
+hr {
+  height: 1px;
+  line-height: 1px;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border: none;
+  background: transparent url('../images/hr.png') 50% 0 no-repeat;
+}
+
+h5 {
+  font-size: 1em;
+  color: #303030;
+}
+
+h6 {
+  font-size: .8em;
+  color: #303030;
+}
+
+p {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+p a {
+  font-weight: 400;
+}
