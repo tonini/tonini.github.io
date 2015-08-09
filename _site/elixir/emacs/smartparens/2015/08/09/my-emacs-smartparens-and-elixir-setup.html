@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Samuel Tonini - Lisp, Elixir, Ruby & JavaScript programmer, hacker at the university of bern, open source contributor, dance teacher, rare soul & funk music digger</title>
+    <meta name="description" content="Lisp, Elixir, Ruby & JavaScript programmer, hacker at the university of bern, open source contributor, dance teacher, rare soul & funk music digger" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Amatic+SC|Yesteryear' rel='stylesheet' type='text/css'>
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+
+</head>
+<body class="post-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/">Home</a>
+        <a class="subscribe-button icon-feed" href="/rss.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">My Smartparens and Elixir setup</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-08-09">09 Aug 2015</time>
+                
+                    on elixir, emacs, and smartparens
+                
+            </section>
+        </header>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="http://www.samueltonini.com">
+                
+                    <span class="blog-title">Samuel Tonini</span>
+                
+            </a>
+        </header> -->
+
+        <!-- <span class="post-meta">
+            <time datetime="2015-08-09">09 Aug 2015</time>
+            
+                on elixir, emacs, and smartparens
+            
+        </span> -->
+
+        <!-- <h1 class="post-title">My Smartparens and Elixir setup</h1> -->
+
+        <section class="post-content">
+            <p>As you all could imagine I write a right amount of Emacs Lisp because for <a href="https://github.com/tonini/alchemist.el">Alchemist</a>.
+To get a bit of support while writing all these parentheses I use a minor mode called <a href="https://github.com/Fuco1/smartparens">Smartparens</a>.</p>
+
+<p>It quotes itself as the following:</p>
+
+<blockquote>
+<p>... deals with parens pairs and tries to be smart about it.</p>
+</blockquote>
+
+<p>For someone who writes Emacs Lisp regularly the <a href="https://github.com/Fuco1/smartparens">Smartparens</a> also offers great functionality to move between expressions for example, which are really handy.</p>
+
+<p>But I guess for you Elixir guys this isn&#39;t what you looking for. So what I like about <a href="https://github.com/Fuco1/smartparens">Smartparens</a> too is the ability to add new custom pairs, like in our situation as Elixir programmers <code>do</code>/<code>end</code> for example.</p>
+
+<p>There are two situations where I like the auto pairing, in <code>do</code>/<code>end</code> or <code>-&gt;</code>/<code>end</code> cases.</p>
+
+<p>Let&#39;s see how my custom setup looks like to realize the desired behavior:</p>
+
+<div class="highlight"><pre><code class="language-emacs" data-lang="emacs"><span class="p">(</span><span class="nb">defun</span> <span class="nv">my-elixir-do-end-close-action</span> <span class="p">(</span><span class="nv">id</span> <span class="nv">action</span> <span class="nv">context</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">eq</span> <span class="nv">action</span> <span class="ss">&#39;insert</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">newline-and-indent</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">forward-line</span> <span class="mi">-1</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">indent-according-to-mode</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nv">sp-with-modes</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">elixir-mode</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">sp-local-pair</span> <span class="s">&quot;-&gt;&quot;</span> <span class="s">&quot;end&quot;</span>
+                 <span class="ss">:when</span> <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;RET&quot;</span><span class="p">))</span>
+                 <span class="ss">:post-handlers</span> <span class="o">&#39;</span><span class="p">(</span><span class="ss">:add</span> <span class="nv">my-elixir-do-end-close-action</span><span class="p">)</span>
+                 <span class="ss">:actions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">insert</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nv">sp-with-modes</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">elixir-mode</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">sp-local-pair</span> <span class="s">&quot;do&quot;</span> <span class="s">&quot;end&quot;</span>
+                 <span class="ss">:when</span> <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;SPC&quot;</span> <span class="s">&quot;RET&quot;</span><span class="p">))</span>
+                 <span class="ss">:post-handlers</span> <span class="o">&#39;</span><span class="p">(</span><span class="ss">:add</span> <span class="nv">my-elixir-do-end-close-action</span><span class="p">)</span>
+                 <span class="ss">:actions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">insert</span><span class="p">)))</span></code></pre></div>
+
+<p>First, we add the new pairs just for the <code>elixir-mode</code> major mode. Secondly we define our desired start and end pairs, in our case we start with <code>&quot;-&gt;&quot;</code> / <code>&quot;end&quot;</code>.
+The next thing we need to inform <a href="https://github.com/Fuco1/smartparens">Smartparens</a> about is the keys which should trigger the closing action. For the first pair definition, these would be just <code>&quot;RET&quot;</code> (Return). For a correct indentation after our favored pairing is done, we add our custom function <code>my-elixir-do-end-close-action</code> to the post handlers. These functions will be called by <a href="https://github.com/Fuco1/smartparens">Smartparens</a> after the pairing is done, in our case we just obtain our desired indentation.</p>
+
+<p>That&#39;s all, you now will have these two auto pairings available inside your Elixir files.</p>
+
+<p>I&#39;m not sure about any other pairings which would be useful, if you have some ideas I would be glad to hear it.</p>
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="/" style="background-image: url(/assets/images/samuel.jpg)">
+                    <span class="hidden">Samuel Tonini's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> Samuel Tonini </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Lisp, Elixir, Ruby & JavaScript programmer, hacker at the university of bern, open source contributor, dance teacher, rare soul & funk music digger
+                    </p>
+                </section>
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=My Smartparens and Elixir setup&amp;url=http://www.samueltonini.com/elixir/emacs/smartparens/2015/08/09/my-emacs-smartparens-and-elixir-setup.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.samueltonini.com/elixir/emacs/smartparens/2015/08/09/my-emacs-smartparens-and-elixir-setup.html"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://www.samueltonini.com/elixir/emacs/smartparens/2015/08/09/my-emacs-smartparens-and-elixir-setup.html"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="/">Samuel Tonini</a> &copy;
+               &bull; All rights reserved.
+      </section>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2950562-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>

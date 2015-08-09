@@ -27,13 +27,10 @@ about: 'about.html'
 
         </div>
     </div>
-    {% if paginator.posts.any? %} <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a> {% endif %}
-
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
 
-
 <main id="content" class="content" role="main">
-
 
     <div class="extra-pagination inner">
         {% include pagination.html %}

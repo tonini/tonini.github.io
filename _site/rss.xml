@@ -6,7 +6,18 @@
   xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
   <channel>
     <title>Samuel Tonini</title>
-    <link>blog url</link>
+    <link>http://www.samueltonini.com</link>
     <description>Lisp, Elixir, Ruby &amp; JavaScript programmer, hacker at the university of bern, open source contributor, dance teacher, rare soul &amp; funk music digger</description>
+    <pubDate>Sun, 09 Aug 2015 00:00:00 +0200</pubDate>
+    <item>
+      <title>My Smartparens and Elixir setup</title>
+      <link>http://www.samueltonini.com/elixir/emacs/smartparens/2015/08/09/my-emacs-smartparens-and-elixir-setup.html</link>
+      <description>&lt;p&gt;As you all could imagine I write a right amount of Emacs Lisp because for &lt;a href=&quot;https://github.com/tonini/alchemist.el&quot;&gt;Alchemist&lt;/a&gt;.
+To get a bit of support while writing all these parentheses I use a minor mode called &lt;a href=&quot;https://github.com/Fuco1/smartparens&quot;&gt;Smartparens&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 09 Aug 2015 00:00:00 +0200</pubDate>
+      <dc:date>2015-08-09T00:00:00+02:00</dc:date>
+    </item>
+    <dc:date>2015-08-09T00:00:00+02:00</dc:date>
   </channel>
 </rss>
