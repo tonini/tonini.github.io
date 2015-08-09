@@ -5,7 +5,7 @@ date:   2015-08-09
 categories: elixir emacs smartparens
 ---
 
-As you all could imagine I write a right amount of Emacs Lisp because for [Alchemist][alchemist].
+As you all could imagine I write a great amount of Emacs Lisp because for [Alchemist][alchemist].
 To get a bit of support while writing all these parentheses I use a minor mode called [Smartparens][smartparens].
 
 It quotes itself as the following:
