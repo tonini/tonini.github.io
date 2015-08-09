@@ -47,5 +47,15 @@ That's all, you now will have these two auto pairings available inside your Elix
 
 I'm not sure about any other pairings which would be useful, if you have some ideas I would be glad to hear it.
 
+**UPDATE**
+
+As [Martin Gausby][martin_gausby] mentioned in the comments, set the idly time delay for [company-mode][company-mode] a bit higher would be a good idea to get around the issue that company-mode will complete functions like `do_*` before you even could press `ENTER` to trigger the `end` part of the `do` / `end` pairing.
+
+That's how you change the idly delay time for company-mode completion:
+
+`(setq company-idle-delay 0.5)`
+
 [smartparens]:    https://github.com/Fuco1/smartparens
 [alchemist]:      https://github.com/tonini/alchemist.el
+[martin_gausby]:  https://github.com/gausby
+[company-mode]:   http://company-mode.github.io/

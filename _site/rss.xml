@@ -12,7 +12,7 @@
     <item>
       <title>My Smartparens and Elixir setup</title>
       <link>http://www.samueltonini.com/elixir/emacs/smartparens/2015/08/09/my-emacs-smartparens-and-elixir-setup.html</link>
-      <description>&lt;p&gt;As you all could imagine I write a right amount of Emacs Lisp because for &lt;a href=&quot;https://github.com/tonini/alchemist.el&quot;&gt;Alchemist&lt;/a&gt;.
+      <description>&lt;p&gt;As you all could imagine I write a great amount of Emacs Lisp because for &lt;a href=&quot;https://github.com/tonini/alchemist.el&quot;&gt;Alchemist&lt;/a&gt;.
 To get a bit of support while writing all these parentheses I use a minor mode called &lt;a href=&quot;https://github.com/Fuco1/smartparens&quot;&gt;Smartparens&lt;/a&gt;.&lt;/p&gt;
 </description>
       <pubDate>Sun, 09 Aug 2015 00:00:00 +0200</pubDate>
