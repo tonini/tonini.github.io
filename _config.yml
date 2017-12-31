@@ -2,7 +2,7 @@ name: Samuel Tonini
 description: Lisp, Elixir, Ruby & JavaScript programmer, hacker at the university of bern, open source contributor, dance teacher, rare soul & funk music digger
 meta_description: "Lisp, Elixir, Ruby & JavaScript programmer, hacker at the university of bern, open source contributor, dance teacher, rare soul & funk music digger"
 
-highlighter: pygments
+highlighter: rouge
 logo: false
 paginate: 15
 baseurl: /
